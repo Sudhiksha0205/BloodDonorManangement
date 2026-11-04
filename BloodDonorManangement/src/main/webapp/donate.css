@@ -1,0 +1,407 @@
+/* =========================================
+   RED PULSE - DONATE BLOOD PAGE
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================
+   PAGE
+   ========================================= */
+
+body {
+    background: #f5f6fa;
+}
+
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background: #c1121f;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sidebar nav a:hover {
+    background: #ffffff22;
+}
+
+.sidebar nav a.active {
+    background: #ffffff22;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.content {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    padding: 24px;
+}
+
+
+/* =========================================
+   TOP BAR
+   ========================================= */
+
+.topbar {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.topbar h1 {
+    color: #c1121f;
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+
+.topbar p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   DASHBOARD BUTTON
+   ========================================= */
+
+.dashboard-btn {
+    width: auto !important;
+    min-width: 130px;
+    height: 44px;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 10px 20px;
+
+    background: #c1121f;
+    color: #fff;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.dashboard-btn:hover {
+    background: #9d0b17;
+}
+
+
+/* =========================================
+   MAIN PANEL
+   ========================================= */
+
+.donation-panel {
+    background: #fff;
+    border-radius: 16px;
+
+    padding: 24px;
+
+    margin-bottom: 18px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.donation-panel h2 {
+    color: #c1121f;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.panel-description {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+
+/* =========================================
+   TWO COLUMN FORM
+   ========================================= */
+
+.donation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.donation-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================
+   FORM GROUP
+   ========================================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+
+    font-size: 14px;
+    color: #444;
+
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+
+    background: #fff;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #c1121f;
+
+    box-shadow:
+        0 0 5px rgba(193, 18, 31, 0.25);
+}
+
+
+/* =========================================
+   INFORMATION BOX
+   ========================================= */
+
+.donation-info {
+    background: #fff5f5;
+
+    border-left: 5px solid #c1121f;
+
+    border-radius: 12px;
+
+    padding: 16px 18px;
+
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.donation-info h3 {
+    color: #c1121f;
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+.donation-info p {
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   CONFIRM BUTTON
+   ========================================= */
+
+.donation-submit {
+    margin-top: 5px;
+}
+
+.confirm-donation-btn {
+    display: block;
+
+    width: 100% !important;
+
+    height: 46px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #c1121f;
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.confirm-donation-btn:hover {
+    background: #9d0b17;
+}
+
+.confirm-donation-btn:active {
+    transform: scale(0.99);
+}
+
+
+/* =========================================
+   QUOTE
+   ========================================= */
+
+.quote {
+    background: #fff5f5;
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.quote h2 {
+    color: #c1121f;
+
+    font-size: 19px;
+
+    margin-bottom: 6px;
+}
+
+.quote p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 75px;
+    }
+
+    .sidebar h2 {
+        font-size: 0;
+    }
+
+    .sidebar h2:first-letter {
+        font-size: 24px;
+    }
+
+    .sidebar nav a {
+        text-align: center;
+        font-size: 0;
+    }
+
+    .content {
+        margin-left: 75px;
+        width: calc(100% - 75px);
+    }
+
+    .donation-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .content {
+        padding: 15px;
+    }
+
+    .topbar {
+        padding: 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .topbar h1 {
+        font-size: 24px;
+    }
+
+    .dashboard-btn {
+        width: 100% !important;
+    }
+
+    .donation-panel {
+        padding: 18px;
+    }
+
+    .donation-info {
+        padding: 14px;
+    }
+
+}

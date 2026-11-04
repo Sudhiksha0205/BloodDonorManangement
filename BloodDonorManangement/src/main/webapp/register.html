@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Pulse | Register</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <div class="register-container">
+
+        <div class="register-image">
+            <img src="pulseimg.jpeg" alt="Blood Donation">
+            <h1>Join Red Pulse</h1>
+            <p>Become a donor and be a reason for someone's smile.</p>
+        </div>
+
+        <div class="register-box">
+
+            <h2>Create Account</h2>
+            <p>Register to donate blood and save lives</p>
+
+            <form action="RegisterServlet" method="post">
+
+                <label for="fullName">Full Name</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Enter your name"
+                    required>
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required>
+
+                <label for="bloodGroup">Blood Group</label>
+                <select id="bloodGroup" name="bloodGroup" required>
+                    <option value="">Select Blood Group</option>
+                    <option value="A+">A+</option>
+                    <option value="A1+">A1+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Create password"
+                    required>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Confirm password"
+                    required>
+
+                <label for="dob">Date of Birth</label>
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    required>
+
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="state">State</label>
+                <input
+                    type="text"
+                    id="state"
+                    name="state"
+                    placeholder="Enter your state"
+                    required>
+
+                <label for="city">City</label>
+                <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder="Enter your city"
+                    required>
+
+                <label for="landmark">Landmark</label>
+                <input
+                    type="text"
+                    id="landmark"
+                    name="landmark"
+                    placeholder="Enter a nearby landmark">
+
+                <label for="medicalCondition">Medical Condition</label>
+                <input
+                    type="text"
+                    id="medicalCondition"
+                    name="medicalCondition"
+                    placeholder="Enter medical condition or None"
+                    required>
+
+                <label for="lastDonationDate">Last Donation Date</label>
+                <input
+                    type="date"
+                    id="lastDonationDate"
+                    name="lastDonationDate">
+
+                <button type="submit" class="register-btn">
+                    Register
+                </button>
+
+                <p class="login-text">
+                    Already have an account?
+                    <a href="login.html">Login</a>
+                </p>
+
+                <a href="index.html" class="home-link">
+                    ← Back to Home
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="register.js"></script>
+
+</body>
+
+</html>

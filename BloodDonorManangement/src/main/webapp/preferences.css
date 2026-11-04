@@ -1,0 +1,151 @@
+
+/* Red Pulse - Improved Global Dark Mode */
+body.rp-dark-mode,
+body.settings-dark-mode {
+    background-color: #151515 !important;
+    color: #f1f1f1;
+}
+
+/* Main page areas */
+body.rp-dark-mode .main-content,
+body.rp-dark-mode main,
+body.rp-dark-mode .content,
+body.rp-dark-mode .dashboard-content {
+    background-color: #151515;
+    color: #f1f1f1;
+}
+
+/* Cards and content sections */
+body.rp-dark-mode .card,
+body.rp-dark-mode .settings-card,
+body.rp-dark-mode .stat-card,
+body.rp-dark-mode .request-card,
+body.rp-dark-mode .profile-card,
+body.rp-dark-mode .content-card,
+body.rp-dark-mode .quick-actions,
+body.rp-dark-mode .recent-requests {
+    background-color: #242424 !important;
+    color: #f1f1f1 !important;
+    border-color: #383838;
+}
+
+/* Text readability */
+body.rp-dark-mode h1,
+body.rp-dark-mode h2,
+body.rp-dark-mode h3,
+body.rp-dark-mode h4,
+body.rp-dark-mode p,
+body.rp-dark-mode label,
+body.rp-dark-mode span,
+body.rp-dark-mode strong,
+body.rp-dark-mode small {
+    color: #f1f1f1;
+}
+
+/* Inputs */
+body.rp-dark-mode input,
+body.rp-dark-mode select,
+body.rp-dark-mode textarea {
+    background-color: #292929;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+/* Links */
+body.rp-dark-mode a {
+    color: #ff8585;
+}
+
+/* Keep buttons readable */
+body.rp-dark-mode button {
+    color: #ffffff;
+}
+
+/* Emergency and blood request cards */
+body.rp-dark-mode .blood-request,
+body.rp-dark-mode .request-item,
+body.rp-dark-mode .emergency-card {
+    background-color: #2b2022 !important;
+    color: #ffffff !important;
+    border-color: #cf142b;
+}
+
+/* FINAL DARK MODE OVERRIDE */
+body.rp-dark-mode .main-content *,
+body.rp-dark-mode main *,
+body.rp-dark-mode .dashboard-content * {
+    border-color: #383838;
+}
+
+body.rp-dark-mode .main-content > div,
+body.rp-dark-mode main > div,
+body.rp-dark-mode .dashboard-content > div {
+    color: #f1f1f1;
+}
+
+body.rp-dark-mode .main-content > div[style*="background"],
+body.rp-dark-mode main > div[style*="background"] {
+    background-color: #242424 !important;
+}
+
+body.rp-dark-mode .main-content h1,
+body.rp-dark-mode .main-content h2,
+body.rp-dark-mode .main-content h3,
+body.rp-dark-mode .main-content p,
+body.rp-dark-mode .main-content span,
+body.rp-dark-mode main h1,
+body.rp-dark-mode main h2,
+body.rp-dark-mode main h3,
+body.rp-dark-mode main p,
+body.rp-dark-mode main span {
+    color: #f1f1f1 !important;
+}
+
+/* Dashboard Dark Mode - Targeted Fix */
+body.rp-dark-mode .topbar,
+body.rp-dark-mode .card,
+body.rp-dark-mode .panel {
+    background: #242424 !important;
+    color: #f1f1f1 !important;
+}
+
+body.rp-dark-mode .topbar h1,
+body.rp-dark-mode .topbar p,
+body.rp-dark-mode .card h3,
+body.rp-dark-mode .card h2,
+body.rp-dark-mode .card p,
+body.rp-dark-mode .panel h2,
+body.rp-dark-mode .request h3,
+body.rp-dark-mode .request p {
+    color: #f1f1f1 !important;
+}
+
+body.rp-dark-mode .request {
+    background: #302225 !important;
+    color: #f1f1f1 !important;
+    border-left-color: #c1121f;
+}
+
+body.rp-dark-mode .actions button {
+    background: #3a2528 !important;
+    color: #ff8b94 !important;
+}
+
+body.rp-dark-mode .actions button:hover {
+    background: #c1121f !important;
+    color: #ffffff !important;
+}
+
+body.rp-dark-mode .quote {
+    background: linear-gradient(135deg, #8f101b, #c1121f) !important;
+    color: #ffffff !important;
+}
+
+body.rp-dark-mode .quote h2,
+body.rp-dark-mode .quote p {
+    color: #ffffff !important;
+}
+
+body.rp-dark-mode .available {
+    color: #39c982 !important;
+}

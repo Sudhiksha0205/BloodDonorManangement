@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Red Pulse | Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="preferences.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2>🩸 Red Pulse</h2>
+
+        <nav>
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="profile.html">
+                👤 My Profile
+            </a>
+
+            <a href="donate.html">
+                🩸 Donate Blood
+            </a>
+
+            <a href="find-donor.html">
+                🔎 Find Donor
+            </a>
+
+            <a href="requests.html">
+                📌 Requests
+            </a>
+
+            <a href="settings.html">
+                ⚙ Settings
+            </a>
+
+            <a href="LogoutServlet">
+                🚪 Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+
+                <h1 id="welcome">
+                    Welcome Back, User ❤️
+                </h1>
+
+                <p>
+                    Your kindness can save a life today.
+                </p>
+
+            </div>
+
+
+            <!-- EMERGENCY BUTTON -->
+            <button type="button" id="emergencyBtn">
+                🚨 Emergency Help
+            </button>
+
+        </header>
+
+
+        <!-- USER INFORMATION CARDS -->
+        <section class="cards">
+
+
+            <div class="card">
+
+                <h3>
+                    Blood Group
+                </h3>
+
+                <h2 id="userBloodGroup">
+                    --
+                </h2>
+
+                <p>
+                    Your registered blood type
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Donation Count
+                </h3>
+
+                <h2>
+                    0
+                </h2>
+
+                <p>
+                    Total donations made
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Status
+                </h3>
+
+                <h2 class="available">
+                    Available
+                </h2>
+
+                <p>
+                    Ready to donate
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- MAIN GRID -->
+        <section class="main-grid">
+
+
+            <!-- QUICK ACTIONS -->
+            <div class="panel">
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+
+                <div class="actions">
+
+                    <button type="button"
+                        onclick="window.location.href='donate.html'">
+
+                        🩸 Donate Now
+
+                    </button>
+
+
+                    <button type="button"
+                        onclick="window.location.href='find-donor.html'">
+
+                        🔎 Search Donor
+
+                    </button>
+
+
+                    <button type="button"
+                        onclick="window.location.href='requests.html'">
+
+                        📌 Create Request
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECENT REQUESTS -->
+            <div class="panel">
+
+                <h2>
+                    Recent Blood Requests
+                </h2>
+
+
+                <div class="request">
+
+                    <h3>
+                        A+ Blood Required
+                    </h3>
+
+                    <p>
+                        Location: Chennai
+                    </p>
+
+                    <span>
+                        Emergency
+                    </span>
+
+                </div>
+
+
+                <div class="request">
+
+                    <h3>
+                        O- Blood Required
+                    </h3>
+
+                    <p>
+                        Location: Tambaram
+                    </p>
+
+                    <span>
+                        Urgent
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- QUOTE -->
+        <section class="quote">
+
+            <h2>
+                "A small act of kindness can become someone's biggest hope."
+            </h2>
+
+            <p>
+                Donate blood. Save lives. Be a hero.
+            </p>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="dashboard.js"></script>
+<script src="settings.js"></script>
+
+</body>
+
+</html>

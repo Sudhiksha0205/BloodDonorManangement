@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Pulse | My Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="preferences.css">
+    <script src="https://kit.fontawesome.com/6d2ea823d0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            ❤️ <span>Red Pulse</span>
+        </div>
+        <ul>
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="active">
+                <a href="profile.html">
+                    <i class="fas fa-user"></i>
+                    My Profile
+                </a>
+            </li>
+            <li>
+                <a href="donate.html">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    Donate Blood
+                </a>
+            </li>
+            <li>
+                <a href="find-donor.html">
+                    <i class="fas fa-search"></i>
+                    Find Donor
+                </a>
+            </li>
+            <li>
+                <a href="requests.html">
+                    <i class="fas fa-tint"></i>
+                    Requests
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </li>
+            <li>
+                <a href="login.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <!-- Main -->
+    <main class="main">
+        <header>
+            <h1>My Donor Profile</h1>
+            <p>
+                "Your generosity can give someone another chance at life."
+            </p>
+        </header>
+        <!-- Profile Card -->
+        <section class="profile-card">
+            <div class="profile-top">
+                <img src="https://i.imgur.com/Z6X6GQk.png" alt="Profile">
+                <div>
+                    <h2 id="name">Loading...</h2>
+                    <p id="donorId">Donor ID : Loading...</p>
+                    <span class="status">
+                        🟢 Available to Donate
+                    </span>
+                </div>
+            </div>
+        </section>
+        <!-- Personal -->
+        <section class="card">
+            <h2>Personal Information</h2>
+            <div class="grid">
+                <div class="field">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName">
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="field">
+                    <label>Phone Number</label>
+                    <input type="text" id="phone">
+                </div>
+                <div class="field">
+                    <label>Date of Birth</label>
+                    <input type="date" id="dob">
+                </div>
+                <div class="field">
+                    <label>Gender</label>
+                    <select id="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <!-- Donation -->
+        <section class="card">
+            <h2>Donation Information</h2>
+            <div class="grid">
+                <div class="field">
+                    <label>Blood Group</label>
+                    <select id="bloodGroup">
+                        <option>A+</option>
+                        <option>A-</option>
+                        <option>B+</option>
+                        <option>B-</option>
+                        <option>AB+</option>
+                        <option>AB-</option>
+                        <option>O+</option>
+                        <option>O-</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Last Donation Date</label>
+                    <input type="date" id="lastDonation">
+                </div>
+                <div class="field">
+                    <label>Total Donations</label>
+                    <input type="number" value="0" id="donations">
+                </div>
+                <div class="field">
+                    <label>Weight (kg)</label>
+                    <input type="number" id="weight">
+                </div>
+            </div>
+        </section>
+        <!-- Address -->
+        <section class="card">
+            <h2>Address</h2>
+            <div class="grid">
+                <div class="field">
+                    <label>State</label>
+                    <input type="text" id="state">
+                </div>
+                <div class="field">
+                    <label>City</label>
+                    <input type="text" id="city">
+                </div>
+                <div class="field">
+                    <label>Landmark</label>
+                    <input type="text" id="landmark">
+                </div>
+            </div>
+        </section>
+        <!-- Health -->
+        <section class="card">
+            <h2>Health Information</h2>
+            <div class="grid">
+                <div class="field">
+                    <label>Medical Condition</label>
+                    <select id="medical">
+                        <option>None</option>
+                        <option>Diabetes</option>
+                        <option>Blood Pressure</option>
+                        <option>Asthma</option>
+                        <option>Heart Disease</option>
+                      <option>Other</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Emergency Contact</label>
+                    <input type="text" id="emergencyName">
+                </div>
+                <div class="field">
+                    <label>Emergency Contact Number</label>
+                    <input type="text" id="emergencyPhone">
+                </div>
+            </div>
+        </section>
+        <div class="buttons">
+            <button id="editBtn">Edit Profile</button>
+            <button id="saveBtn">
+                Save Changes
+            </button>
+        </div>
+    </main>
+</div>
+<script src="profile.js"></script>
+<script src="settings.js"></script>
+</body>
+</html>

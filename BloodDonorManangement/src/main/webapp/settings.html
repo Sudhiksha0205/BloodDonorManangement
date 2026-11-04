@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Pulse | Settings</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>🩸 Red Pulse</h2>
+        <nav>
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="profile.html">👤 My Profile</a>
+            <a href="donate.html">🩸 Donate Blood</a>
+            <a href="find-donor.html">🔎 Find Donor</a>
+            <a href="requests.html">📌 Requests</a>
+            <a href="settings.html" class="active">⚙ Settings</a>
+            <a href="LogoutServlet">🚪 Logout</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <header class="topbar">
+            <div>
+                <h1>Settings ⚙️</h1>
+                <p>Manage your Red Pulse preferences, notifications and account security.</p>
+            </div>
+            <button type="button"
+                    onclick="window.location.href='dashboard.html'">
+                ← Dashboard
+            </button>
+        </header>
+
+        <section class="settings-grid">
+
+            <!-- ACCOUNT PREFERENCES -->
+            <div class="settings-card">
+                <div class="card-heading">
+                    <div class="heading-icon">👤</div>
+                    <div>
+                        <h2>Account Preferences</h2>
+                        <p>Customize how your account works.</p>
+                    </div>
+                </div>
+
+                <div class="setting-row">
+                    <div>
+                        <h3>Donor Availability</h3>
+                        <p>Allow your profile to appear when patients search for donors.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="availability" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div>
+                        <h3>Emergency Requests</h3>
+                        <p>Receive urgent blood donation requests from your city.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="emergency" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div>
+                        <h3>Nearby Donor Alerts</h3>
+                        <p>Get notified when a nearby blood requirement matches your group.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="nearby" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- NOTIFICATIONS -->
+            <div class="settings-card">
+                <div class="card-heading">
+                    <div class="heading-icon">🔔</div>
+                    <div>
+                        <h2>Notifications</h2>
+                        <p>Choose the alerts you want to receive.</p>
+                    </div>
+                </div>
+
+                <div class="setting-row">
+                    <div>
+                        <h3>Email Notifications</h3>
+                        <p>Receive important account and donation updates by email.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="emailNotifications" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div>
+                        <h3>Donation Reminders</h3>
+                        <p>Receive reminders when you become eligible to donate again.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="donationReminder" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div>
+                        <h3>Request Updates</h3>
+                        <p>Get updates about blood requests you created or responded to.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="requestUpdates" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- PRIVACY -->
+            <div class="settings-card">
+                <div class="card-heading">
+                    <div class="heading-icon">🔒</div>
+                    <div>
+                        <h2>Privacy &amp; Visibility</h2>
+                        <p>Control what other users can see.</p>
+                    </div>
+                </div>
+
+                <div class="setting-row">
+                    <div>
+                        <h3>Show Phone Number</h3>
+                        <p>Allow verified users to view your contact number.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="showPhone">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div>
+                        <h3>Show Exact Location</h3>
+                        <p>Display your city only instead of your exact address.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="showLocation" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="setting-row">
+                    <div>
+                        <h3>Profile Search Visibility</h3>
+                        <p>Allow your donor profile to appear in donor searches.</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="profileVisibility" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SECURITY -->
+            <div class="settings-card">
+                <div class="card-heading">
+                    <div class="heading-icon">🛡️</div>
+                    <div>
+                        <h2>Security</h2>
+                        <p>Protect your Red Pulse account.</p>
+                    </div>
+                </div>
+
+                <div class="security-item">
+                    <div>
+                        <h3>Password</h3>
+                        <p>Keep your account secure by using a strong password.</p>
+                    </div>
+                    <button type="button"
+                            class="outline-btn"
+                            onclick="changePassword()">
+                        Change Password
+                    </button>
+                </div>
+
+                <div class="security-item">
+                    <div>
+                        <h3>Login Protection</h3>
+                        <p>Additional verification can help protect your account.</p>
+                    </div>
+                    <span class="security-status">Enabled</span>
+                </div>
+
+                <div class="security-item">
+                    <div>
+                        <h3>Active Session</h3>
+                        <p>Current browser session</p>
+                    </div>
+                    <span class="session-status">● Active</span>
+                </div>
+            </div>
+
+            <!-- DELETE ACCOUNT -->
+            <div class="settings-card">
+                <div class="card-heading">
+                    <div class="heading-icon">⚠️</div>
+                    <div>
+                        <h2>Delete Account</h2>
+                        <p>Permanently remove your Red Pulse account.</p>
+                    </div>
+                </div>
+
+                <div class="security-item">
+                    <div>
+                        <h3>Delete my account</h3>
+                        <p>This cannot be undone. Your donation records and blood requests will also be deleted.</p>
+                    </div>
+                    <button type="button"
+                            class="outline-btn"
+                            onclick="deleteAccount()">
+                        Delete Account
+                    </button>
+                </div>
+            </div>
+
+            <!-- COMMUNICATION PREFERENCES -->
+            <div class="settings-card">
+                <div class="card-heading">
+                    <div class="heading-icon">📢</div>
+                    <div>
+                        <h2>Communication Preferences</h2>
+                        <p>Choose how Red Pulse communicates with you.</p>
+                    </div>
+                </div>
+
+                <div class="preference-box">
+                    <label>
+                        <input type="radio" name="communication"
+                               value="all" checked>
+                        <span>
+                            <strong>All Updates</strong>
+                            <small>Receive important system, donation and emergency updates.</small>
+                        </span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="communication"
+                               value="important">
+                        <span>
+                            <strong>Important Only</strong>
+                            <small>Receive only emergency and account-related notifications.</small>
+                        </span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="communication"
+                               value="none">
+                        <span>
+                            <strong>Minimal Communication</strong>
+                            <small>Receive only essential security notifications.</small>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- SYSTEM PREFERENCES -->
+            <div class="settings-card">
+                <div class="card-heading">
+                    <div class="heading-icon">🌐</div>
+                    <div>
+                        <h2>System Preferences</h2>
+                        <p>Personalize your Red Pulse experience.</p>
+                    </div>
+                </div>
+
+                <div class="select-setting">
+                    <label for="language">Language</label>
+                    <select id="language">
+                        <option value="English">English</option>
+                        <option value="Tamil">Tamil</option>
+                    </select>
+                </div>
+
+                <div class="select-setting">
+                    <label for="timezone">Time Zone</label>
+                    <select id="timezone">
+                        <option value="Asia/Kolkata">India Standard Time (IST)</option>
+                        <option value="UTC">UTC</option>
+                    </select>
+                </div>
+
+                <div class="select-setting">
+                    <label for="theme">Interface Theme</label>
+                    <select id="theme">
+                        <option value="Light">Light</option>
+                        <option value="Dark">Dark</option>
+                        <option value="System Default">System Default</option>
+                    </select>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SAVE PREFERENCES -->
+        <section class="save-section">
+            <div>
+                <h2>Save Your Preferences</h2>
+                <p>Your settings will be applied to your Red Pulse account.</p>
+            </div>
+            <button type="button"
+                    class="save-btn"
+                    onclick="saveSettings()">
+                ✓ Save Changes
+            </button>
+        </section>
+
+        <!-- QUOTE -->
+        <section class="quote">
+            <h2>"Technology connects people. Humanity saves lives."</h2>
+            <p>Your preferences help Red Pulse deliver the right information at the right time.</p>
+        </section>
+
+    </main>
+</div>
+
+<script src="settings.js"></script>
+
+<script>
+function deleteAccount() {
+    if (!confirm(
+        "Are you sure you want to permanently delete your Red Pulse account?"
+    )) {
+        return;
+    }
+
+    const confirmation = prompt(
+        'Type DELETE to confirm account deletion:'
+    );
+
+    if (confirmation === null || confirmation.trim() !== "DELETE") {
+        alert("Account deletion cancelled.");
+        return;
+    }
+
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = "DeleteAccountServlet";
+
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = "confirmDelete";
+    input.value = "YES";
+
+    form.appendChild(input);
+    document.body.appendChild(form);
+    form.submit();
+}
+</script>
+
+</body>
+</html>

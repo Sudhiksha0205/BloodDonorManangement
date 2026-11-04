@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Red Pulse | Donate Blood</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main dashboard style -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Donate page specific style -->
+    <link rel="stylesheet" href="donate.css">
+    <link rel="stylesheet" href="preferences.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <h2>🩸 Red Pulse</h2>
+
+        <nav>
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="profile.html">
+                👤 My Profile
+            </a>
+
+            <a href="donate.html" class="active">
+                🩸 Donate Blood
+            </a>
+
+            <a href="find-donor.html">
+                🔎 Find Donor
+            </a>
+
+            <a href="requests.html">
+                📌 Requests
+            </a>
+
+            <a href="settings.html">
+                ⚙ Settings
+            </a>
+
+            <a href="LogoutServlet">
+                🚪 Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+                    Donate Blood ❤️
+                </h1>
+
+                <p>
+                    Your donation can give someone another chance at life.
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                class="dashboard-btn"
+                onclick="window.location.href='dashboard.html'">
+
+                ← Dashboard
+
+            </button>
+
+        </header>
+
+
+        <!-- ================= DONATION PANEL ================= -->
+
+        <section class="panel donation-panel">
+
+            <h2>
+                🩸 Confirm Your Blood Donation
+            </h2>
+
+            <p class="panel-description">
+                Please provide the details below to register your upcoming blood donation.
+            </p>
+
+
+            <!-- ================= FORM ================= -->
+
+            <form
+                id="donationForm"
+                action="DonationServlet"
+                method="POST">
+
+
+                <div class="donation-grid">
+
+
+                    <!-- LEFT COLUMN -->
+
+                    <div class="donation-column">
+
+                        <!-- HOSPITAL NAME -->
+
+                        <div class="form-group">
+
+                            <label for="hospitalName">
+                                Hospital Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="hospitalName"
+                                name="hospitalName"
+                                placeholder="Enter hospital name"
+                                required>
+
+                        </div>
+
+
+                        <!-- DONATION DATE -->
+
+                        <div class="form-group">
+
+                            <label for="donationDate">
+                                Donation Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="donationDate"
+                                name="donationDate"
+                                required>
+
+                        </div>
+
+
+                        <!-- HOSPITAL ADDRESS -->
+
+                        <div class="form-group">
+
+                            <label for="hospitalAddress">
+                                Hospital Address
+                            </label>
+
+                            <input
+                                type="text"
+                                id="hospitalAddress"
+                                name="hospitalAddress"
+                                placeholder="Enter hospital address"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RIGHT COLUMN -->
+
+                    <div class="donation-column">
+
+                        <!-- DONATION TIME -->
+
+                        <div class="form-group">
+
+                            <label for="donationTime">
+                                Preferred Donation Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="donationTime"
+                                name="donationTime"
+                                required>
+
+                        </div>
+
+
+                        <!-- BLOOD GROUP -->
+
+                        <div class="form-group">
+
+                            <label for="bloodGroup">
+                                Blood Group
+                            </label>
+
+                            <select
+                                id="bloodGroup"
+                                name="bloodGroup"
+                                required>
+
+                                <option value="">
+                                    Select Blood Group
+                                </option>
+
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- DONATION TYPE -->
+
+                        <div class="form-group">
+
+                            <label for="donationType">
+                                Donation Type
+                            </label>
+
+                            <select
+                                id="donationType"
+                                name="donationType"
+                                required>
+
+                                <option value="">
+                                    Select Donation Type
+                                </option>
+
+                                <option value="Whole Blood">
+                                    Whole Blood
+                                </option>
+
+                                <option value="Plasma">
+                                    Plasma
+                                </option>
+
+                                <option value="Platelets">
+                                    Platelets
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= INFORMATION ================= -->
+
+                <div class="donation-info">
+
+                    <h3>
+                        ❤️ Every Donation Matters
+                    </h3>
+
+                    <p>
+                        Please make sure you are eligible and healthy before donating blood.
+                        Your contribution can help patients during emergencies, surgeries,
+                        and critical medical treatments.
+                    </p>
+
+                </div>
+
+
+                <!-- ================= CONFIRM BUTTON ================= -->
+
+                <div class="donation-submit">
+
+                    <button
+                        type="submit"
+                        class="confirm-donation-btn">
+
+                        ❤️ Confirm Donation
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= BOTTOM QUOTE ================= -->
+
+        <section class="quote">
+
+            <h2>
+                "A single donation can make a world of difference."
+            </h2>
+
+            <p>
+                Thank you for choosing to be someone's lifesaver.
+            </p>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="donate.js"></script>
+<script src="settings.js"></script>
+
+</body>
+
+</html>

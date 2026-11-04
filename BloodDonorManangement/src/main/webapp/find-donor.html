@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Red Pulse | Find Donor</title>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+<link rel="stylesheet" href="find-donor.css">
+<link rel="stylesheet" href="preferences.css">
+
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+
+    <h2>🩸 Red Pulse</h2>
+
+    <nav>
+
+        <a href="dashboard.html">
+            🏠 Dashboard
+        </a>
+
+        <a href="profile.html">
+            👤 My Profile
+        </a>
+
+        <a href="donate.html">
+            🩸 Donate Blood
+        </a>
+
+        <a href="find-donor.html" class="active">
+            🔎 Find Donor
+        </a>
+
+        <a href="requests.html">
+            📌 Requests
+        </a>
+
+        <a href="settings.html">
+            ⚙ Settings
+        </a>
+
+        <a href="LogoutServlet">
+            🚪 Logout
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- MAIN CONTENT -->
+<main class="content">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+
+        <div>
+
+            <h1>
+                Find a Blood Donor ❤️
+            </h1>
+
+            <p>
+                Find suitable blood donors quickly and easily.
+            </p>
+
+        </div>
+
+        <button
+            type="button"
+            onclick="window.location.href='dashboard.html'">
+
+            ← Dashboard
+
+        </button>
+
+    </header>
+
+
+    <!-- SEARCH CARD -->
+    <section class="panel search-panel">
+
+        <div class="panel-heading">
+
+            <div>
+
+                <h2>
+                    🔎 Search for Donors
+                </h2>
+
+                <p>
+                    Enter the blood group and city to find available donors.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <form id="donorSearchForm">
+
+            <div class="form-row">
+
+                <!-- BLOOD GROUP -->
+                <div class="form-group">
+
+                    <label for="bloodGroup">
+                        Blood Group
+                    </label>
+
+                    <select
+                        id="bloodGroup"
+                        name="bloodGroup"
+                        required>
+
+                        <option value="">
+                            Select Blood Group
+                        </option>
+
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- CITY -->
+                <div class="form-group">
+
+                    <label for="city">
+                        City
+                    </label>
+
+                    <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        placeholder="Enter city"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-btn">
+
+                🔎 Search Donors
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- RESULTS -->
+    <section class="panel">
+
+        <div class="section-title">
+
+            <div>
+
+                <h2>
+                    Available Donors
+                </h2>
+
+                <p>
+                    Matching donors will appear here.
+                </p>
+
+            </div>
+
+            <span class="result-icon">
+                ❤️
+            </span>
+
+        </div>
+
+
+        <div
+            id="donorResults"
+            class="donor-grid">
+
+            <div class="empty">
+
+                <div class="empty-icon">
+                    🩸
+                </div>
+
+                <h3>
+                    Search for a Donor
+                </h3>
+
+                <p>
+                    Select a blood group and enter a city above
+                    to find matching donors.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMATION CARDS -->
+    <section class="info-grid">
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                🩸
+            </div>
+
+            <div>
+
+                <h3>
+                    Blood Group
+                </h3>
+
+                <p>
+                    Search donors according to the required blood group.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                📍
+            </div>
+
+            <div>
+
+                <h3>
+                    Nearby Donors
+                </h3>
+
+                <p>
+                    Find donors available in your selected city.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                ❤️
+            </div>
+
+            <div>
+
+                <h3>
+                    Save a Life
+                </h3>
+
+                <p>
+                    Connecting with the right donor can save a life.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUOTE -->
+    <section class="quote">
+
+        <h2>
+            "Your search could save a life."
+        </h2>
+
+        <p>
+            Find the right donor and help someone in need.
+        </p>
+
+    </section>
+
+</main>
+
+
+</div>
+
+<script src="find-donor.js"></script>
+<script src="settings.js"></script>
+
+</body>
+</html>
